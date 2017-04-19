@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Second Hand Smoke Guard</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/justified-nav.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/format.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="masthead">
+      <h3 class="text-muted">Second Hand Smoke Guard</h3>
+      <nav>
+        <ul class="nav nav-justified">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="bg.html">Background</a></li>
+          <li><a href="objective.html">Objectives</a></li>
+          <li class="active"><a href="#">Project</a></li>
+          <li><a href="parts.html">Parts</a></li>
+          <li><a href="risk.html">Risk</a></li>
+          <li><a href="summary.html">Summary</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Jumbotron -->
+
+    <div class="jumbotron">
+      <p class="lead">This second-hand smoke detector is to be implemented in E. Coli. Composed genes are fused onto plasmids and then put into E.Coli. The chosen plasmid is a high copy plasmid pSB1C3, derived from iGEM [8]. There are 4 synthetic plasmids used (structure
+        shown in Figure 3.1), details of which are descripted in the following paragraphs.
+      </p>
+      <img src="img/project 3.1.PNG" alt="overview">
+      <p class="small">Figure 3.1 The structure of synthetic plasmids</p>
+      <br>
+      <br>
+
+      <h3>3.1. Plasmid 1: NsrR, CooA, frmR producer (Figure 3.2)</h3>
+
+      <p>This gene produces NsrR, CooA, and frmR continuously in the background. A strong promoter is used to ensure enough proteins are produced. When no smoke sensed, all transcriptions are blocked. A strong constitute promoter J23100 is picked from the
+        constitutive promoter family [9]. There are 3 Ribosome Binding Sites (RBS) in this composite sequence before the start codon of each protein coding sequence. The RBS helps the ribosome to recognize and bind to it, initiating the translation. A
+        strong RBS designed by Mahajan V. S. et al. is utilized in this project [10]. </p>
+      <img src="img/project 3.2.PNG" alt="">
+      <p class="small">Figure 3.2 Plasmid 1for producer</p>
+      <p>The repressor of promoter PyeaR, NsrR is placed after the first RBS [11]. After a ribosome binding to the mRNA, it will move along the strand and attract tRNA to bring the corresponding amino acid, a series of amino acids connect one by one, undergoing
+        conformational changes to accomplish protein synthesis.</p>
+
+      <p>The protein CooA and frmR experience a similar procedure, their coding sequences are derived from [12] and iGEM team TMU-Tokyo [13]. Terminator is needed to stop transcription, a double terminator B0015 designed by Shetty R. [14] is used. A hairpin
+        formation will cause self-annealing, resulting in the RNA polymerase destabilized and terminate the transcription.</p>
+
+      <br />
+      <br />
+
+      <h3>3.2. Plasmid 2: Sensor Centre (Figure 3.3)</h3>
+
+      <p>Efficient sensors are synthesised by fused genes, small gas exposure activates the correlate promoter and produce siRNA. The same RBS and terminator units are selected. </p>
+      <img src="img/project 3.3.PNG" alt="">
+      <p class="small">Figure 3.3 Plasmid 2 for sensor center</p>
+      <p>Part K216005 [15] represents the PyeaR promoter, repressed by NsrR in the absence of NO.</p>
+      <p>Coding sequence of siRNA-A [16] after the RBS produces a short inferencing RNA, which can recognize and bind to the target sequence on the mRNA, degrades it, causing no translation. This RNA sequence is derived from Huang L. et al.’s paper [16].
+        Table 3.1 [16] shows the details of these sequences. For the mRNA targets, complementary sequences are used.</p>
+      <img src="img/projectTable 3.1.PNG" alt="">
+      <p class="small">Table 3.1 The detail of the sequences</p>
+      <p>The CooA binding site is located upstream of the P(CooF) promoter K352002 [17]. Once CooA-CO hybrid is made, this promoter will be activated and start transcription. After placing the RBS, the coding sequence of siRNA-B [16] is fused and direct
+        the synthesis of siRNA strand. Followed by a terminator.</p>
+      <p>The last sensor is for formaldehyde detecting. The frmRAB operon locates at upstream of the PfrmR promoter (negatively regulated by frmR and induced by formaldehyde [5] [18]). Promoter K749008 is from TMU-Tokyo [19]. After RBS, siRNA-C [16] sequence
+        is fused and followed by a double terminator.
+      </p>
+      <br>
+      <br>
+
+      <h3>3.3. Plasmid 3: OR gate (Figure 3.4)</h3>
+
+      <p>This complex plasmid includes a strong constitute promoter J23100 that controls the formation of the repressor LacI, following with 3 different siRNA target sequences at its 3’-UTR. LacI part C0012, as one of the most popular repressor in synthesis
+        biology, could inhibit the promoter Plac and stop the transcription. It is designed by Kenney G. et al. [20]. The siRNA target points according to [8] are coding in Table 3.2. </p>
+      <img src="img/project 3.4.PNG" alt="">
+      <p class="small">Figure 3.4 Plasmid 3 for OR gate</p>
+      <img src="img/projectTable 3.2.PNG" alt="">
+      <p class="small">Table 3.2. SiRNA Target Sequence </p>
+      <br>
+      <br>
+
+      <h3>3.4. Plasmid 4: Amplifier and Reporter (Figure 3.5)</h3>
+
+      <p>Based on Nistala, G. J., et al.’s discovery of the amplify function of LuxR protein [7], we introduced a similar structure in this project. The LacI protein normally produced by the OR gate in plasmid 3 can prohibit the promoter Plac, hence prevent
+        the transcription of LuxR, which is the activator of promoter P(LuxI). When one or more kinds of toxics are detected, the production of LacI will be terminated, results in small amount of LuxR production. Although the LuxR is relatively small,
+        it can trigger the P(LuxI) on and generate more LuxR, form a positive feedback thus great amount of GFP can be acquired. R0010 from Group Antiquity is applied here [21] as Plac. Part C0062 designed by V. S. Mahajan et al [22] is used as the coding
+        sequence of LuxR. Finally, promoter P(LuxI) R0062 [23] from the same team is utilized. </p>
+      <p>The reporter gene of GFP we use is the most common type E0040, which is derived from Jellyfish [24].</p>
+      <img src="img/project 3.5.PNG" alt="">
+      <p class="small">Figure 3.5 Plasmid 4 for amplifier and reporter</p>
+      <br>
+      <br>
+
+      <div class="reference">
+        <p>[8] iGEM(2008, Sep. 8), Part:pSB1C3. Retrieved Apr17,2017 from http://parts.igem.org/Part:pSB1C3.</p>
+        <p>[9] iGEM team Berkeley (2006-08-04), Part: BBa_J23100. Retrieved Apr 15, 2017, from http://parts.igem.org/Part:BBa_J23100. </p>
+        <p>[10] Mahajan, V.S. et al. (2003, Jan 31), Part: BBa_B0030. Retrieved Apr 17, 2017, from http://parts.igem.org/wiki/index.php/Part:BBa_B0030.</p>
+        <p>[11] iGEM team Peshawar (2016, Oct 13), Part: BBa_K2056001. Retrieved Apr 14, 2017, from http://parts.igem.org/Part:BBa_K2056001.</p>
+        <p>[12] iGEM team METU_Turkey (2010, Oct 02), Part: BBa_K352001. Retrieved Apr 15, 2017, from http://parts.igem.org/Part:BBa_K352001.</p>
+        <p>[13] Akutsu T. (2012, Sep 26), Part: BBa_K749004. Retrieved Apr 16, 2017, from http://parts.igem.org/Part:BBa_K749004.</p>
+        <p>[14] Shetty R. (2003, Jul 17), Part: BBa_B0015. Retrieved Apr 16, 2017, from http://parts.igem.org/Part:BBa_B0015.</p>
+        <p>[15] iGEM team Edinburgh (2009, Sep 25), Part: BBa_K216005. Retrieved Apr 17, 2017, from http://parts.igem.org/Part:BBa_K216005.</p>
+        <p>[16] Huang, L. et al.(2013, Mar 22), Efficient and specific gene knockdown by small interfering RNAs produced in bacteria, Nature Biotechnology 31, 350-356, doi10.1038/nbt.2537.</p>
+        <p> [17] iGEM team METU_Turkey, (2010, Oct 02), Part: BBa_K352002. Retrieved Apr 16, 2017, from http://parts.igem.org/Part:BBa_K352002.</p>
+        <p>[18] NCBI (2016, Nov 19), FrmR regulator protein that represses frmRAB operon [Escherichia coli str. K-12 substr. MG1655]. Retrieved Apr18,2017,from https://www.ncbi.nlm.nih.gov/gene/944986#genomic-context.</p>
+        <p>[19] Akutsu T. (2012, Sep 26), Part: BBa_K749008. Retrieved Apr 17, 2017, from http://parts.igem.org/Part:BBa_K749008.</p>
+        <p>[20] Kenney G. et al., (2003, Jan 31), Part: BBa_C0012. Retrieved Apr 17, 2017, from http://parts.igem.org/wiki/index.php?title=Part:BBa_C0012.</p>
+        <p>[21] iGEM (2003, Jan 31), Part: BBa_R0010. Retrieved Apr 17, 2017, from http://parts.igem.org/Part:BBa_R0010.</p>
+        <p>[22] Mahajan, V.S. et al. (2003, Jan 31), Part: BBa_C0062. Retrieved Apr 17, 2017, from http://parts.igem.org/wiki/index.php?title=Part:BBa_C0062.</p>
+        <p>[23] Mahajan, V.S. et al. (2003, Jan 31), Part: BBa_R0062. Retrieved Apr 17, 2017, from http://parts.igem.org/wiki/index.php/Part:BBa_R0062.</p>
+        <p>[24] iGEM (2004, Sep 30), Part: BBa_E0040. Retrieved Apr 17, 2017, from http://parts.igem.org/wiki/index.php?title=Part:BBa_E0040.</p>
+      </div>
+
+    </div>
+
+    <!-- Site footer -->
+    <footer class="footer">
+      <p>&copy; 2017 Karlie Hu.</p>
+    </footer>
+
+  </div>
+  <!-- /container -->
+
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
